@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+      .cards {
+        display: flex; /* Use flexbox for horizontal alignment */
+        flex-wrap: nowrap; /* Prevent wrapping to the next row */
+        justify-content: space-around; /* Add equal space around cards */
+        gap: 20px; /* Space between cards */
+        margin: 0 auto;
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+      }
+
+      .card {
+        flex: 0 0 200px; /* Set a fixed width for each card */
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        background-color: transparent; /* Keep the background transparent */
+        font-size: 14px;
+        color: rgb(255, 255, 255); /* Revert text color to black */
+      }
+    </style>
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <div style="position: relative; display: flex; align-items: center;">
+      <button id="scroll-left" style="position: absolute; left: -40px;">←</button>
+      <div class="cards">
+        <article class="card">
+          <div>
+            <h2>首頁</h2>
+            <p>!</p>
+            <a href="https://www.et.tku.edu.tw/">Tkuet</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div>
+            <h2>自我介紹</h2>
+            <p>我是zenny張祉姸，就讀淡江大學教育科技系，這是我的期中作業!</p>
+            <a href="https://www.instagram.com/enyxz._?igsh=bjE5c3R1amp2Y2ww">My instagram</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div>
+            <h2>作品集</h2>
+            <p>以下是我的作品.</p>
+            <ul>
+              <li><a href="https://zhihyen.github.io/0307/">第一週</a></li>
+              <li><a href="https://zhihyen.github.io/0314/">第二週</a></li>
+              <li><a href="https://zhihyen.github.io/0321/">第三週</a></li>
+              <li><a href="https://zhihyen.github.io/04111/">第四週</a></li>
+            </ul>
+            <a href="#">作品</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div>
+            <h2>測驗卷</h2>
+            <p>淡江大學測驗卷</p>
+            <a href="https://zhihyen.github.io/0322/">tkuuuuuu</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div>
+            <h2>教學影片</h2>
+            <p>上課!</p>
+            <a href="https://youtu.be/K6mDMS7EAL0">上課上課</a>
+          </div>
+        </article>
+      </div>
+      <button id="scroll-right" style="position: absolute; right: -40px;">→</button>
+    </div>
+    <script src="sketch.js"></script>
+  </body>
+</html>
